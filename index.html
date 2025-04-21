@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
   <style>
     html {
       visibility: hidden;
@@ -142,21 +145,21 @@ span {
 }
 
 .logo {
-top: 5%;
+top: 2%;
 left: 50%;
 z-index: 20;
 width: 190px;
 height: auto;
 transform: translateX(-50%);
 position: absolute;
-perspective: 1000px; /* Added for 3D effect */
+perspective: 1000px;
 }
 
 .logo img {
 top: 5%;
 height: 70px;
 width: auto;
-animation: flipLogo 13s infinite ease-in-out; /* Changed to animation */
+animation: flipLogo 13s infinite ease-in-out;
 transform-style: preserve-3d;
 }
 
@@ -187,64 +190,17 @@ transform-style: preserve-3d;
   transform: rotateY(360deg);
 }
 }
-.dropdown {
-display: inline-block;
-position: relative;
-}
-
-.dropdown-toggle {
-border: none;
-margin: 20px;
-color: white;
-font-size: 24px;
-cursor: pointer;
-background-color: white;
-}
-
-.dropdown-menu {
-left: 0;
-top: 100%;
-margin: 0;
-padding: 0;
-z-index: 10;
-width: 200px;
-height: 50px;
-display: none;
-list-style: none;
-position: absolute;
-background-color: white;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-menu li {
-padding: 10px;
-}
-
-.dropdown-menu li a {
-color: white;
-display: block;
-text-decoration: none;
-}
-
-.dropdown-menu li:hover {
-background-color: #333;
-}
-
-.dropdown:hover .dropdown-menu {
-display: block;
-}
-
 .options {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 5px;
-left: 10%;
+gap: 1px;
+left: 0;
 width: 100%;
 padding: 1px;
-max-height: 200px ;
+max-height: 400px;
 max-width: auto;
 box-sizing: border-box;
-margin-top: 230px;
+margin-top: 260px;
 z-index: 2;
 }
 
@@ -254,7 +210,7 @@ position: relative;
 display: block;
 text-align: center;
 text-decoration: none;
-color: #181818;
+color: #ffffff;
 left: 50%;
 overflow: hidden;
 border-radius: 7px;
@@ -273,31 +229,6 @@ position: relative;
 z-index: 1;
 }
 
-.cl::befor {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 200px;
-background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00, #ff00cc);
-background-size: 400% 400%;
-z-index: 0;
-border-radius: 10px;
-animation: neonGradient 5s linear infinite;
-}
-
-@keyframes neonGradient {
-0% {
-  background-position: 0% 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
-100% {
-  background-position: 0% 50%;
-}
-}
 
 .cl:hover img {
 transform: scale(1.1);
@@ -306,7 +237,7 @@ transform: scale(1.1);
 .cl span {
 top: 80%;
 left: 50%;
-width: 80%;
+width: 100%;
 font-size: 18px;
 font-weight: bold;
 padding: 5px 5px;
@@ -324,6 +255,33 @@ background: #00000017;
 color: #7a7a7a;
 }
 
+.product-info {
+      padding: 7px;
+      text-align: center;
+      font-weight: bolder;
+      font-family: "Playwrite AU SA", cursive;
+
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    
+    .product-info p {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #3f3f3f;
+    }
+
+    .product-info h {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #5f5f5f;
+    }
+    
 /* Modal styles */
 .modal {
 display: none;
@@ -456,23 +414,42 @@ background: #333;
 <!-- Page 2 -->
 <section id="page2" class="page2">
   <h1 class="logo"><img rel="preload" src="DosseMO.jpg" as="image"></h1>
-
   <div class="options">
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_1.jpg" alt="Hoodie1">
-      <span weight="bolder">ORDER - R540</span>
+      <img src="DOSSE_1.jpg" alt="Hoodie4">
+      <div class="product-info">
+        <div class="price">R540</div>
+        <h>Winter Season</h>
+        <p>Dossé Hoodie</p>
+        <p>&nbsp;</p>
+      </div>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_2.jpg" alt="Hoodie2">
-      <span weight="bolder">ORDER - R540</span>
+      <img src="DOSSE_2.jpg" alt="Hoodie4">
+      <div class="product-info">
+        <div class="price">R540</div>
+        <h>Winter Season</h>
+        <p>Dossé Hoodie</p>
+        <p>&nbsp;</p>
+      </div>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_3.jpg" alt="Hoodie3">
-      <span weight="bolder">ORDER - R540</span>
+      <img src="DOSSE_3.jpg" alt="Hoodie4">
+      <div class="product-info">
+        <div class="price">R540</div>
+        <h>Winter Season</h>
+        <p>Dossé Hoodie</p>
+        <p>&nbsp;</p>
+      </div>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
       <img src="DOSSE_4.jpg" alt="Hoodie4">
-      <span weight="bolder">ORDER - R540</span>
+      <div class="product-info">
+        <div class="price">R540</div>
+        <h>Winter Season</h>
+        <p>Dossé Hoodie</p>
+        <p>&nbsp;</p>
+      </div>
     </a>
   </div>
 </section>
