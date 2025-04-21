@@ -119,7 +119,7 @@ align-items: center;
 flex-direction: column;
 justify-content: flex-start;
 overflow-y: visible;
-padding-top: 20px;
+padding-top: 15px;
 font-family: 'Raleway', serif;
 font-weight: bolder;
 }
@@ -129,11 +129,12 @@ font-weight: bolder;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 10px;
-width: 90%;
-max-width: 500px;
-margin: 200px auto 50px; /* Increased top margin to 200px */
-padding: 15px;
+width: 100%;
+max-width: 550px;
+margin: 200px auto 70px; /* Increased top margin to 200px */
+padding: 500px;
 box-sizing: border-box;
+margin-top: 130px;
 }
 
 span {
@@ -152,16 +153,18 @@ perspective: 1000px; /* Added for 3D effect */
 }
 
 .logo img {
-height: 100px;
+top: 5%;
+height: 70px;
 width: auto;
-animation: flipLogo 8s infinite ease-in-out; /* Changed to animation */
+animation: flipLogo 13s infinite ease-in-out; /* Changed to animation */
 transform-style: preserve-3d;
 }
 
 #inputimage {
 position: absolute;
 left: 20%;
-animation: flipLogo 8s infinite ease-in-out;
+top: 5%;
+animation: flipLogo 13s infinite ease-in-out;
 transform-style: preserve-3d;
 }
 
@@ -169,11 +172,8 @@ transform-style: preserve-3d;
 0% {
   transform: rotateY(0deg);
 }
-25% {
-  transform: rotateY(20deg);
-}
 100% {
-  transform: rotateY(0deg);
+  transform: rotateY(360deg);
 }
 
 }
@@ -240,10 +240,11 @@ grid-template-columns: repeat(2, 1fr);
 gap: 5px;
 left: 10%;
 width: 100%;
-padding: 5px;
-max-width: 500px;
+padding: 1px;
+max-height: 200px ;
+max-width: auto;
 box-sizing: border-box;
-margin-top: 130px;
+margin-top: 230px;
 z-index: 2;
 }
 
@@ -254,27 +255,31 @@ display: block;
 text-align: center;
 text-decoration: none;
 color: #181818;
+left: 50%;
 overflow: hidden;
-border-radius: 10px;
-background: black;
+border-radius: 7px;
+background: rgb(255, 255, 255);
+transform: translate(-50%, -50%);
 }
 
 .cl img {
-width: 100%;
-height: 275px;
+width: auto;
+height: 200px;
+align-items: center;
+justify-items: center;
 display: block;
 transition: transform 0.3s ease;
 position: relative;
 z-index: 1;
 }
 
-.cl::before {
+.cl::befor {
 content: '';
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-height: 100%;
+height: 200px;
 background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00, #ff00cc);
 background-size: 400% 400%;
 z-index: 0;
@@ -419,17 +424,18 @@ background: #333;
       window.location.href = "#page1";
     }, 3000);
   </script>
-  <h1 class="landinglogo"><img src="DosseMO.jpg" width="auto" height="380"></h1>
+  <h1 class="landinglogo"><img src="DosseMO.jpg" width="auto" height="180"></h1>
 </section>
 
 <!-- Page 1 -->
 <section id="page1" class="page">
-  <h1 class="logo"><img rel="preload" src="DosseMO.jpg" as="image"></h1>
+  <h1 class="logo"><img rel="preload" src="DosseMO.jpg" as="image" top="1%";> </h1>
   <iframe width="auto" height="280"
     src="https://www.youtube.com/embed/O8fVaMA59jI?si=EAwO_oREx9muk5f5&amp;controls=0&amp;start=1"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
   <div class="center-txt">
     <a href="#" class="clickable-txt" id="accessBtn">Continue</a>
   </div>
@@ -453,19 +459,19 @@ background: #333;
 
   <div class="options">
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_1.jpg" alt="Hoodie">
+      <img src="DOSSE_1.jpg" alt="Hoodie1">
       <span weight="bolder">ORDER - R540</span>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_2.jpg" alt="Hoodie">
+      <img src="DOSSE_2.jpg" alt="Hoodie2">
       <span weight="bolder">ORDER - R540</span>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_3.jpg" alt="Hoodie">
+      <img src="DOSSE_3.jpg" alt="Hoodie3">
       <span weight="bolder">ORDER - R540</span>
     </a>
     <a href="https://wa.me/message/BL27QY22NKXMC1" class="cl">
-      <img src="DOSSE_4.jpg" alt="Hoodie">
+      <img src="DOSSE_4.jpg" alt="Hoodie4">
       <span weight="bolder">ORDER - R540</span>
     </a>
   </div>
