@@ -33,17 +33,31 @@
     }
   </style>
   <style>
-body, html {
+:root, body, html {
 margin: 0;
 padding: 0;
 height: 100%;
 color: black;
 overflow: hidden;
 background-color: white !important;
+color: black !important;
+forced-color-adjust: none !important;
 background: white !important;
 text-decoration: none;
 font-family: 'Raleway', serif;
 }
+.white-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: white;
+  background-color: white;
+  z-index: -9999;
+  pointer-events: none;
+  }    
 
 .page {
 height: 100vh;
@@ -122,7 +136,6 @@ position: relative;
 max-height: 100vh;
 }
 
-/* Update the page2 container */
 .page2 {
 height: auto;
 min-height: 100vh;
@@ -164,8 +177,6 @@ transform-style: preserve-3d;
 100% {
   transform: rotateY(360deg);
 }
-
-}
 }
 
 @keyframes flipLogo {
@@ -198,7 +209,7 @@ transform-style: preserve-3d;
 }
 
 .footer-text {
-  margin-top: auto; /* Pushes footer to bottom */
+  margin-top: auto;
   padding: 45px;
   padding-bottom: 111px;
   text-align: center;
@@ -293,13 +304,12 @@ transform: scale(1.1);
       text-decoration: line-through;
     }
 .single-item {
-  grid-column: 1 / -1; /* Makes it span all columns */
+  grid-column: 1 / -1;
   width: auto;
   height: 920px;
   margin: 5px auto;
 }
     
-/* Modal styles */
 .modal {
 display: none;
 position: fixed;
@@ -312,7 +322,6 @@ background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-left 50%;
 background-color: #ffffff;
 border: 1px solid #888;
 width: 100%;
@@ -415,7 +424,7 @@ background: #333;
     <a href="#" class="clickable-txt" id="accessBtn">Continue</a>
   </div>
 
-  <!-- Code Entry Modal -->
+  <!-- Code Entry -->
   <div id="codeModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
