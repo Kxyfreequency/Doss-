@@ -5,6 +5,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#ffffff">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -24,15 +26,21 @@
     }
   </style>
   <style>
-body, html {
+    :root {
+  color-scheme: light;
+  background-color: white !important;
+}
+@media (prefers-color-scheme: dark) {
+:root, body, html {
 margin: 0;
 padding: 0;
 height: 100%;
 color: black;
 overflow: hidden;
-background: white;
 text-decoration: none;
 font-family: 'Raleway', serif;
+background-color: white !important;
+background: white;
 }
 
 .page {
@@ -44,24 +52,6 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 }
-
-.landinglogo {
-    color: white;
-    display: flex;
-    font-size: 4.1em;
-    font-weight: bold;
-    justify-content: center;
-    animation: zoomInOut 3s infinite;
-  }
-
-  @keyframes zoomInOut {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.8);
-    }
-  }
 
 #page1 {
 gap: 15px;
@@ -82,33 +72,26 @@ justify-content: center;
 color: white;
 display: flex;
 font-weight: bold;
+
 justify-content: center;
 animation: 
-    blackWhitePulse 3s infinite,
-    zoomInOut 3s infinite;
+    pulse 2s ease-in-out infinite, zoomInOut 2s infinite;
 }
-
-@keyframes blackWhitePulse {
-  0%, 100% {
-    color: white;
-    filter: contrast(100%);
-  }
-  25% {
-    color: #aaa; /* Light gray */
-    filter: contrast(150%);
-  }
-  50% {
-    color: black;
-    filter: contrast(200%);
-  }
-  75% {
-    color: #555; /* Dark gray */
-    filter: contrast(150%);
-  }
+@keyframes pulse {
+  0% {opacity: 1;}
+  90% {opacity: 0;}
+  91% {opacity: 1;}
+  92% {opacity: 0;}
+  93% {opacity: 1;}
+  94% {opacity: 0;}
+  95% {opacity: 1;}
+  97% {opacity: 0;}
+  100% {opacity: 1;}
 }
 @keyframes zoomInOut {
-  0%, 100% { transform: scale(1); } /* Start/end at normal size */
-  50% { transform: scale(0.8); }    /* Shrink midway */
+0% {transform: scale(1);}
+75% {transform: scale(0.5);}
+100% {transform: scale(1);}
 }
 
 .clickable-txt {
@@ -208,7 +191,7 @@ transform-style: preserve-3d;
   position: absolute;
   gap: 4px;
   margin-top: 800px;
-  margin-left: -5%;
+  margin-left: -7%;
   box-sizing: border-box;
 }
 
@@ -414,7 +397,7 @@ background: #333;
       window.location.href = "#page1";
     }, 3000);
   </script>
-  <h1 class="landinglogo"><img src="DosseMO.jpg" width="auto" height="180"></h1>
+  <h1 class="landinglogo"><img src="DosseMO.jpg" width="auto" height="130"></h1>
 </section>
 
 <!-- Page 1 -->
@@ -492,7 +475,7 @@ background: #333;
 
 <div class="option">
   <a href="https://wa.me/message/BL27QY22NKXMC1">
-      <img src="ncc.jpg" height="420px" width="auto" alt="Special Item">
+      <img src="ncc.jpg" height="415px" width="auto" alt="Special Item">
     </a>
    </div>
 
