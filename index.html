@@ -223,25 +223,24 @@ z-index: 99;
  .option {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  position: absolute;
+  position: relative; /* Changed from absolute to relative */
   gap: 4px;
-  margin-top: 800px;
+  margin-top: 20px; /* Reduced from 800px */
   margin-left: -5%;
   box-sizing: border-box;
   z-index: 99;
 }
 
 .footer-text {
-  margin-top: auto;
-  padding: 45px;
-  padding-bottom: 85px;
+  margin-top: 20px; /* Changed from 'auto' to a fixed value */
+  padding: 20px; /* Reduced from 45px */
+  padding-bottom: 30px; /* Reduced from 111px */
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
   color: black;
   z-index: 99;
 }
-
 
 .special-font {
   font-family: 'Almendra', serif;
