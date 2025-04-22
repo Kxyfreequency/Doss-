@@ -81,19 +81,34 @@ justify-content: center;
 .landinglogo {
 color: white;
 display: flex;
-font-size: 2.1em;
 font-weight: bold;
 justify-content: center;
-animation: zoomInOut 3s infinite;
+animation: 
+    blackWhitePulse 3s infinite,
+    zoomInOut 3s infinite;
 }
 
+@keyframes blackWhitePulse {
+  0%, 100% {
+    color: white;
+    filter: contrast(100%);
+  }
+  25% {
+    color: #aaa; /* Light gray */
+    filter: contrast(150%);
+  }
+  50% {
+    color: black;
+    filter: contrast(200%);
+  }
+  75% {
+    color: #555; /* Dark gray */
+    filter: contrast(150%);
+  }
+}
 @keyframes zoomInOut {
-0% {
-  transform: scale(1);
-}
-100% {
-  transform: scale(0.8);
-}
+  0%, 100% { transform: scale(1); } /* Start/end at normal size */
+  50% { transform: scale(0.8); }    /* Shrink midway */
 }
 
 .clickable-txt {
@@ -184,7 +199,7 @@ transform-style: preserve-3d;
   width: 410px;
   max-width: 410px;
   margin: 263px 0; /* Space above/below */
-  padding: 0;
+  padding: 15;
   box-sizing: border-box;
 } 
  .option {
@@ -192,13 +207,13 @@ transform-style: preserve-3d;
   gap: 4px;
   margin-top: 751px;
   margin-left: -14%;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .footer-text {
   margin-top: auto; /* Pushes footer to bottom */
   padding: 45px;
-  padding-bottom: 220px;
+  padding-bottom: 111px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
@@ -474,7 +489,7 @@ background: #333;
 
 <div class="option">
   <a href="https://wa.me/message/BL27QY22NKXMC1">
-      <img src="ncc.jpg" height="417px" width="auto" alt="Special Item">
+      <img src="ncc.jpg" height="418px" width="auto" alt="Special Item">
     </a>
    </div>
   
@@ -483,7 +498,7 @@ background: #333;
   
   <div class="footer-text">
     <p><span class="special-fontz">Pessimistic Dose</span></p>
-    <p class="special-font">© 2025. All rights reserved.</p>
+    <p class="special-font">© 2022. All rights reserved.</p>
   </div>
 </section>
 
